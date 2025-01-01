@@ -374,6 +374,14 @@ function calculateVisibleBox() {
                     for (var face in obj.faces) {
                         if (obj.faces[face].texture !== null) {
                             texture = Texture.all.findInArray('uuid', obj.faces[face].texture);
+                            
+                            
+                            if (texture == null || texture.name == undefined) {
+                                continue
+                            }
+                            texture_name = texture.name.replace("_e.png", "");
+                            texture = Texture.all.findInArray('name', texture_name)
+                            
                             break
                         }
                     }
