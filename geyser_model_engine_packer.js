@@ -379,7 +379,7 @@ function calculateVisibleBox() {
                             if (texture == null || texture.name == undefined) {
                                 continue
                             }
-                            texture_name = texture.name.replace("_e.png", "");
+                            texture_name = texture.name.replace("_e.png", ".png");
                             texture = Texture.all.findInArray('name', texture_name)
                             
                             break
